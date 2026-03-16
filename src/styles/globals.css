@@ -2,13 +2,14 @@
 
 @theme {
     --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --color-primary: #f67280;
+    --color-primary: #aab3a4;
     --color-primary-content: #101828;
     --color-complementary: #355c7d;
+    --color-page-bg: #f7d6b2;
     --background-image-noise: linear-gradient(
             to bottom,
-            color-mix(in oklab, var(--color-gray-950) 0%, transparent),
-            color-mix(in oklab, var(--color-gray-950) 100%, transparent)
+            color-mix(in oklab, var(--color-gray-150) 0%, transparent),
+            color-mix(in oklab, var(--color-gray-150) 100%, transparent)
         ),
         url('/images/noise.png');
 }
@@ -76,3 +77,31 @@
         --btn-py: 1.125rem;
     }
 }
+
+/* =========================================================
+   Scroll Reveal Animations
+   Used for subtle on-scroll section transitions
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+

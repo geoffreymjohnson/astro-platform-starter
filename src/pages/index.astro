@@ -2,18 +2,90 @@
 import Layout from '../layouts/Layout.astro';
 import Markdown from '../components/Markdown.astro';
 
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
+const hero = `
+Small-scale construction, repairs, and remodels for homeowners who want quality work without luxury pricing or unnecessary complications.
 
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
+Clear estimates. Skilled execution. Projects finished properly.
+`;
+
+const offering = `
+What We Do
+Achillea Built specializes in small to mid-size residential construction projects, typically ranging from $500 to $15,000.
+This includes:
+Repairs and improvements
+Small remodels
+Exterior structures and site work
+Finish carpentry and detail-oriented builds
+If your project is too complex for a handyman but too small or personal for a large contractor, this is exactly where we work best.
+`;
+
+const philosophy = `
+Philosophy / Differentiator (This Is the Core)
+Most homeowners end up choosing between:
+Cheap work that needs fixing later, or
+Premium contractors whose pricing doesn’t match the scope of the job
+Achillea Built exists in the middle — where solid construction meets good judgment.
+Every project is approached with:
+Careful planning
+Respect for your home
+Attention to details that actually matter
+Pricing that reflects the work, not a luxury brand markup
+The goal isn’t perfection for show — it’s near-perfect craftsmanship where it counts, and smart decisions everywhere else.
+`;
+
+const choice =`
+Clear communication from estimate to completion
+Clean, organized job sites
+Work done to last, not just pass inspection
+Fair, transparent pricing
+One skilled builder accountable for the result
+You’ll always know what’s being done, why it’s being done, and what it will cost.
+`;
+
+const clients =`
+Achillea Built is a good fit if you:
+Care about quality but don’t want boutique pricing
+Prefer working directly with the person doing the work
+Want a job done correctly the first time
+Value honesty over upselling
+If you’re looking for the lowest bid regardless of outcome, this probably isn’t the right fit — and that’s okay.
+`;
+
+const reachout =`
+If you have a project in mind and want a clear, thoughtful approach to getting it done, reach out to start the conversation.
+`;
+
+const about =`
+Achillea Built LLC provides small-scale residential construction and repair with an emphasis on quality workmanship, clear communication, and fair pricing. Based on the belief that good construction doesn’t need to be flashy or overpriced, Achillea Built delivers careful, reliable results for real homes.
 `;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="Welcome to Achillea Built.">
+    <h1 class="mb-10 reveal">Achillea Built LLC</h1>
+    <h1 class="mb-10 reveal">Thoughtful Construction, Done Right.</h1>
+    <Markdown content={hero} class="mb-10 text-lg reveal" />
+
+    <h2 class="mb-10 reveal">What we do</h2>
+    <Markdown content={offering} class="mb-10 text-lg reveal" />
+
+    <h2 class="mb-10 reveal">Project philosophy</h2>
+    <Markdown content={philosophy} class="mb-10 text-lg reveal" />
+
+    <h2 class="mb-10 reveal">People choose Achillea for:</h2>
+    <Markdown content={choice} class="mb-10 text-lg reveal" />
+
+    <h2 class="mb-10 reveal">Our clients</h2>
+    <Markdown content={clients} class="mb-10 text-lg reveal" />
+
+    <p class="reveal">
+    <Markdown content={reachout} class="mb-10 text-lg reveal" />
+
+    <a 
+	href="https://docs.netlify.com/frameworks/astro/"
+	class="btn btn-lg sm:min-w-64"
+  >
+    Request an Estimate
+  </a>
+</p>
+
 </Layout>
