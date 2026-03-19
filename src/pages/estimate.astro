@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Request an Estimate | Achillea Built">
+  <section class="mx-auto max-w-3xl py-12 sm:py-16">
+    <div class="mb-10 reveal">
+      <p class="mb-3 text-sm font-semibold tracking-[0.14em] uppercase opacity-70">
+        Achillea Built LLC
+      </p>
+      <h1 class="mb-6">Request an Estimate</h1>
+      <p class="max-w-2xl text-lg leading-8">
+        Tell us a little about your project and we’ll follow up to discuss scope,
+        fit, and next steps. Achillea Built typically handles residential
+        construction and repair projects in the $500–$15,000 range.
+      </p>
+    </div>
+
+    <div class="rounded-2xl border border-black/10 bg-white/70 p-6 shadow-sm backdrop-blur-sm sm:p-8 reveal">
+      <form
+        name="estimate-request"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        action="/thank-you"
+        class="space-y-8"
+      >
+        <input type="hidden" name="form-name" value="estimate-request" />
+
+        <p class="hidden">
+          <label>
+            Don’t fill this out if you’re human:
+            <input name="bot-field" />
+          </label>
+        </p>
+
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div>
+            <label for="name" class="form-label">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              required
+              autocomplete="name"
+              class="form-input"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="form-label">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              class="form-input"
+            />
+          </div>
+
+          <div>
+            <label for="phone" class="form-label">Phone</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              class="form-input"
+            />
+          </div>
+
+          <div>
+            <label for="location" class="form-label">Project Location</label>
+            <input
+              id="location"
+              name="location"
+              type="text"
+              autocomplete="street-address"
+              placeholder="City or project address"
+              class="form-input"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="project-type" class="form-label">Type of Project</label>
+          <select
+            id="project-type"
+            name="project-type"
+            required
+            class="form-input"
+          >
+            <option value="">Select one</option>
+            <option>Repair / maintenance</option>
+            <option>Small remodel</option>
+            <option>Exterior project</option>
+            <option>Carpentry / built-in</option>
+            <option>Site work / gravel / fencing</option>
+            <option>Not sure</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="description" class="form-label">Project Description</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="7"
+            required
+            placeholder="Briefly describe what you’d like done, including any useful details about materials, dimensions, or existing conditions."
+            class="form-input min-h-40"
+          ></textarea>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div>
+            <label for="budget" class="form-label">Budget Range</label>
+            <select id="budget" name="budget" class="form-input">
+              <option value="">Select one</option>
+              <option>Under $1,000</option>
+              <option>$1,000–$5,000</option>
+              <option>$5,000–$15,000</option>
+              <option>$15,000+</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="timeline" class="form-label">Desired Timeline</label>
+            <select id="timeline" name="timeline" class="form-input">
+              <option value="">Select one</option>
+              <option>As soon as possible</option>
+              <option>Within 1 month</option>
+              <option>1–3 months</option>
+              <option>3+ months</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="contact-method" class="form-label">Best Way to Reach You</label>
+          <select
+            id="contact-method"
+            name="contact-method"
+            class="form-input"
+          >
+            <option value="">Select one</option>
+            <option>Email</option>
+            <option>Phone</option>
+            <option>Text</option>
+          </select>
+        </div>
+
+        <div class="rounded-xl bg-black/4 p-4 text-sm leading-7">
+          Please share enough detail for an initial conversation. If the project
+          looks like a good fit, we’ll follow up to discuss next steps.
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="btn btn-lg sm:min-w-56">
+            Send Request
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</Layout>

@@ -54,6 +54,39 @@
         > :last-child {
             @apply mb-0;
         }
+
+        p {
+            @apply leading-7;
+        }
+
+        ul {
+            @apply pl-6 my-6 list-disc;
+        }
+
+        li {
+            @apply my-2;
+        }
+    }
+
+    .form-label {
+        @apply block mb-2 text-sm font-semibold tracking-wide;
+    }
+
+    .form-input {
+        @apply w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-base outline-none transition;
+    }
+
+    .form-input::placeholder {
+        color: color-mix(in oklab, black 45%, transparent);
+    }
+
+    .form-input:focus {
+        @apply border-black/25;
+        box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 30%, transparent);
+    }
+
+    textarea.form-input {
+        @apply resize-y;
     }
 
     .btn {

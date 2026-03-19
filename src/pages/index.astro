@@ -11,44 +11,63 @@ Clear estimates. Skilled execution. Projects finished properly.
 const offering = `
 What We Do
 Achillea Built specializes in small to mid-size residential construction projects, typically ranging from $500 to $15,000.
+
 This includes:
-Repairs and improvements
-Small remodels
-Exterior structures and site work
-Finish carpentry and detail-oriented builds
+
+* Repairs and improvements
+
+* Small remodels
+
+* Exterior structures and site work
+
+* Finish carpentry and detail-oriented builds
+
 If your project is too complex for a handyman but too small or personal for a large contractor, this is exactly where we work best.
 `;
 
 const philosophy = `
-Philosophy / Differentiator (This Is the Core)
-Most homeowners end up choosing between:
-Cheap work that needs fixing later, or
-Premium contractors whose pricing doesn’t match the scope of the job
+Most homeowners end up choosing between cheap work that needs fixing later, or premium contractors whose pricing doesn’t match the scope of the job
+
 Achillea Built exists in the middle — where solid construction meets good judgment.
 Every project is approached with:
-Careful planning
-Respect for your home
-Attention to details that actually matter
-Pricing that reflects the work, not a luxury brand markup
+
+* Careful planning
+
+* Respect for your home
+
+* Attention to details that actually matter
+
+* Pricing that reflects the work, not a luxury brand markup
+
 The goal isn’t perfection for show — it’s near-perfect craftsmanship where it counts, and smart decisions everywhere else.
 `;
 
 const choice =`
-Clear communication from estimate to completion
-Clean, organized job sites
-Work done to last, not just pass inspection
-Fair, transparent pricing
-One skilled builder accountable for the result
-You’ll always know what’s being done, why it’s being done, and what it will cost.
+* Clear communication from estimate to completion
+
+* Clean, organized job sites
+
+* Work done to last, not just pass inspection
+
+* Fair, transparent pricing
+
+* One skilled builder accountable for the result
+
+* You’ll always know what’s being done, why it’s being done, and what it will cost.
 `;
 
 const clients =`
 Achillea Built is a good fit if you:
-Care about quality but don’t want boutique pricing
-Prefer working directly with the person doing the work
-Want a job done correctly the first time
-Value honesty over upselling
-If you’re looking for the lowest bid regardless of outcome, this probably isn’t the right fit — and that’s okay.
+
+* Care about quality but don’t want boutique pricing
+
+* Prefer working directly with the person doing the work
+
+* Want a job done correctly the first time
+
+* Value honesty over upselling
+
+* If you’re looking for the lowest bid regardless of outcome, this probably isn’t the right fit — and that’s okay.
 `;
 
 const reachout =`
@@ -56,7 +75,9 @@ If you have a project in mind and want a clear, thoughtful approach to getting i
 `;
 
 const about =`
-Achillea Built LLC provides small-scale residential construction and repair with an emphasis on quality workmanship, clear communication, and fair pricing. Based on the belief that good construction doesn’t need to be flashy or overpriced, Achillea Built delivers careful, reliable results for real homes.
+Achillea Built LLC provides small-scale residential construction and repair with an emphasis on quality workmanship, clear communication, and fair pricing. Based on the belief that good construction doesn’t need to be flashy or overpriced. 
+
+Achillea Built delivers careful, reliable results for real homes.
 `;
 ---
 
@@ -71,7 +92,70 @@ Achillea Built LLC provides small-scale residential construction and repair with
     <h2 class="mb-10 reveal">Project philosophy</h2>
     <Markdown content={philosophy} class="mb-10 text-lg reveal" />
 
-    <h2 class="mb-10 reveal">People choose Achillea for:</h2>
+<section class="mt-20">
+  	<div class="mb-10 reveal">
+    <h2 class="mb-4">Selected Work</h2>
+    <p class="max-w-2xl leading-7">
+      A few recent projects, ranging from exterior construction to design and planning work.
+    </p>
+  </div>
+
+<div class="grid gap-10 md:grid-cols-3 mb-12 sm:mb-16">
+
+    <!-- Fence -->
+    <article class="reveal">
+      <img
+        src="/images/carsons_neighbor_wire_fence.webp"
+        alt="Welded wire fence with custom gate"
+        class="mb-4 rounded-2xl"
+      />
+      <h3 class="mb-2 text-xl font-semibold">Fence and Custom Gate</h3>
+      <p class="mb-3 leading-7">
+        Welded wire front yard fence with a custom-built gate sized and fitted specifically for the property.
+      </p>
+      <p class="text-sm leading-6 opacity-80">
+        The focus was on a clean, durable installation that felt appropriate to the home and built to last.
+      </p>
+    </article>
+
+    <!-- Entry Cover -->
+    <article class="reveal">
+      <img
+        src="/images/1930grant_rear_entry.webp"
+        alt="Covered rear entry addition with new exterior paint"
+        class="mb-4 rounded-2xl"
+      />
+      <h3 class="mb-2 text-xl font-semibold">Rear Entry Cover</h3>
+      <p class="mb-3 leading-7">
+        Construction of a covered rear entry, followed by exterior repainting to integrate the addition.
+      </p>
+      <p class="text-sm leading-6 opacity-80">
+        Designed and built to feel like a natural extension of the home while improving everyday function.
+      </p>
+    </article>
+
+    <!-- Rendering -->
+    <article class="reveal">
+      <img
+        src="/images/ricks_bath_render_doorway_view.webp"
+        alt="3D bathroom design rendering"
+        class="mb-4 rounded-2xl"
+      />
+      <h3 class="mb-2 text-xl font-semibold">Bathroom Rendering</h3>
+      <p class="mb-3 leading-7">
+        3D rendering created to plan layout, materials, and overall feel prior to construction.
+      </p>
+      <p class="text-sm leading-6 opacity-80">
+        Helps clarify decisions early and ensures the finished project aligns with the original intent.
+      </p>
+    </article>
+
+  </div>
+
+</section>
+
+    
+<h2 class="mb-10 reveal">People choose Achillea for:</h2>
     <Markdown content={choice} class="mb-10 text-lg reveal" />
 
     <h2 class="mb-10 reveal">Our clients</h2>
@@ -80,12 +164,7 @@ Achillea Built LLC provides small-scale residential construction and repair with
     <p class="reveal">
     <Markdown content={reachout} class="mb-10 text-lg reveal" />
 
-    <a 
-	href="https://docs.netlify.com/frameworks/astro/"
-	class="btn btn-lg sm:min-w-64"
-  >
-    Request an Estimate
-  </a>
+    <a href="/estimate" class="btn btn-lg sm:min-w-64">Request an Estimate</a>
 </p>
 
 </Layout>
